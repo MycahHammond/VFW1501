@@ -6,12 +6,13 @@ var m = "5%";
 var mv = "10%";
 
 var mainWindow = Ti.UI.createWindow({
-	backgroundColor: "#f3f3f3"
+	backgroundColor: "#808080" 
 	
 });
 
+//Main view displaying elements from array
 var arrayView =  Ti.UI.createView({
-	borderColor: "#0020c2",
+	borderColor: "#000",
 	borderWidth: 5,
 	borderRadius: 3,
 	backgroundColor: "#fff",
@@ -20,6 +21,7 @@ var arrayView =  Ti.UI.createView({
 	top: m
 });
 
+//next button view
 var nextButton = Ti.UI.createView({
 	borderColor: "#000",
 	borderWidth: 5,
@@ -31,6 +33,7 @@ var nextButton = Ti.UI.createView({
 	bottom: m,
 });
 
+//back button view
 var backButton = Ti.UI.createView({
 	borderColor: "#000",
 	borderWidth: 5,
@@ -43,6 +46,7 @@ var backButton = Ti.UI.createView({
 	bottom: m
 });
 
+//main view label with initial text
 var arrayLabel = Ti.UI.createLabel({
 	text: "Jokes!",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
@@ -51,13 +55,14 @@ var arrayLabel = Ti.UI.createLabel({
 	
 });
 
+//next button label
 var nextLabel = Ti.UI.createLabel({
 	text: "Next",
 	color: "#000",
 	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "30"}
 });
 
-
+//back button label
 var backLabel = Ti.UI.createLabel({
 	text: "Back",
 	color: "#000",
@@ -66,7 +71,7 @@ var backLabel = Ti.UI.createLabel({
 });
 
 
-
+//Loads JS not essential to start up
 var jsFunctions = require("workhorse");
 
 arrayView.add(arrayLabel);

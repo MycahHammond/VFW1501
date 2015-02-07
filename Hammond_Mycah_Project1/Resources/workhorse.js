@@ -1,7 +1,8 @@
+//array and iterator
 var joke = ["Knock knock...", "Who's there?", "Canoe...", "Canoe who?", "Canoe Help Me Figure This Out?!?"];
 var i = -1;
 
-
+//next button click function
 var next = function (){
 	if(i<4){
 		i++;
@@ -14,6 +15,7 @@ var next = function (){
 
 };
 
+//back button click funtion
 var back = function (){
 	if(i>0){
 		i--;
@@ -26,5 +28,6 @@ var back = function (){
 
 };
 
+//calls to click functions
 nextButton.addEventListener("click", next);
 backButton.addEventListener("click", back);

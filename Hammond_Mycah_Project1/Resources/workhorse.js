@@ -12,7 +12,6 @@ var next = function (){
 	}
 	
 	arrayLabel.setText(joke[i]);
-
 };
 
 //back button click funtion
@@ -25,7 +24,6 @@ var back = function (){
 	}
 	
 	arrayLabel.setText(joke[i]);
-
 };
 
 //calls to click functions

@@ -51,8 +51,7 @@ var arrayLabel = Ti.UI.createLabel({
 	text: "Jokes!",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	color: "#000",
-	font: { fontName: "Damascus", fontSize: "35"}
-	
+	font: { fontName: "Damascus", fontSize: "35"}	
 });
 
 //next button label
@@ -67,7 +66,6 @@ var backLabel = Ti.UI.createLabel({
 	text: "Back",
 	color: "#000",
 	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "30"}
-
 });
 
 

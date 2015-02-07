@@ -21,11 +21,10 @@ var arrayView =  Ti.UI.createView({
 });
 
 var nextButton = Ti.UI.createView({
-	text: "Next",
-	borderColor: "#0020c2",
+	borderColor: "#000",
 	borderWidth: 5,
 	borderRadius: 3,
-	backgroundColor: "#fff",
+	backgroundColor: "green",
 	width: "35%",
 	height: "20%",
 	right: m,
@@ -33,11 +32,10 @@ var nextButton = Ti.UI.createView({
 });
 
 var backButton = Ti.UI.createView({
-	text: "Back",
-	borderColor: "#0020c2",
+	borderColor: "#000",
 	borderWidth: 5,
 	borderRadius: 3,
-	backgroundColor: "#fff",
+	backgroundColor: "red",
 	width: "35%",
 	height: "20%",
 	left: m,
@@ -47,18 +45,24 @@ var backButton = Ti.UI.createView({
 
 var arrayLabel = Ti.UI.createLabel({
 	text: "Jokes!",
-	color: "#000"
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	color: "#000",
+	font: { fontName: "Damascus", fontSize: "35"}
+	
 });
 
 var nextLabel = Ti.UI.createLabel({
 	text: "Next",
-	color: "#000"
+	color: "#000",
+	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "30"}
 });
 
 
 var backLabel = Ti.UI.createLabel({
 	text: "Back",
-	color: "#000"
+	color: "#000",
+	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "30"}
+
 });
 
 

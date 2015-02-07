@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.Mycah.Project1</id>
+    <id>com.mycah.project1</id>
     <name>Hammond_Mycah_Project1</name>
     <version>1.0</version>
     <publisher>Mycah</publisher>
@@ -11,7 +11,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>84aaacad-689a-4283-8e21-167167291cf7</guid>
+    <guid>4e76689f-cd8d-49c4-a105-cf16a2da943f</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>

@@ -58,14 +58,14 @@ var arrayLabel = Ti.UI.createLabel({
 var nextLabel = Ti.UI.createLabel({
 	text: "Next",
 	color: "#000",
-	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "30"}
+	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "25"}
 });
 
 //back button label
 var backLabel = Ti.UI.createLabel({
 	text: "Previous",
 	color: "#000",
-	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "30"}
+	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "25"}
 });
 
 

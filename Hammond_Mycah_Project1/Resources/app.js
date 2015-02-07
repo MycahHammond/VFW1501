@@ -1,64 +1,73 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
+Ti.UI.setBackgroundColor("#404040");
+//Standard Margin
+var m = "5%";
 
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
+//View Margin
+var mv = "10%";
 
-
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#f3f3f3"
+	
 });
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var arrayView =  Ti.UI.createView({
+	borderColor: "#0020c2",
+	borderWidth: 5,
+	borderRadius: 3,
+	backgroundColor: "#fff",
+	width: "90%",
+	height: "65%",
+	top: m
 });
 
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+var nextButton = Ti.UI.createView({
+	text: "Next",
+	borderColor: "#0020c2",
+	borderWidth: 5,
+	borderRadius: 3,
+	backgroundColor: "#fff",
+	width: "35%",
+	height: "20%",
+	right: m,
+	bottom: m,
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var backButton = Ti.UI.createView({
+	text: "Back",
+	borderColor: "#0020c2",
+	borderWidth: 5,
+	borderRadius: 3,
+	backgroundColor: "#fff",
+	width: "35%",
+	height: "20%",
+	left: m,
+	right: mv,
+	bottom: m
 });
 
-win2.add(label2);
+var arrayLabel = Ti.UI.createLabel({
+	text: "Jokes!",
+	color: "#000"
+});
+
+var nextLabel = Ti.UI.createLabel({
+	text: "Next",
+	color: "#000"
+});
+
+
+var backLabel = Ti.UI.createLabel({
+	text: "Back",
+	color: "#000"
+});
 
 
 
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
+var jsFunctions = require("workhorse");
 
+arrayView.add(arrayLabel);
+nextButton.add(nextLabel);
+backButton.add(backLabel);
+mainWindow.add(arrayView, nextButton, backButton);
+mainWindow.open();
 
-// open tab group
-tabGroup.open();

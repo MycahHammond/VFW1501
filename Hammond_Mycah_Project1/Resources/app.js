@@ -63,7 +63,7 @@ var nextLabel = Ti.UI.createLabel({
 
 //back button label
 var backLabel = Ti.UI.createLabel({
-	text: "Back",
+	text: "Previous",
 	color: "#000",
 	font: { fontName: "Damascus", fontWeight: "bold", fontSize: "30"}
 });

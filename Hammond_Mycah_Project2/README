@@ -1,7 +1,27 @@
-Welcome to your Appcelerator Titanium Mobile Project
+-Set titles
+-navigation window
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
+// var titleView = Ti.UI.createView({
+	// height: "10%",
+	// top: "0%",
+	// backgroundColor: "#fff"
+// });
+// 
+// var border = Ti.UI.createView({
+	// height: 1,
+	// backgroundColor: "#333",
+	// top: titleView.height + titleView.top	
+// });
+// 
+// var titleLable = Ti.UI.createLabel({
+	// top: "17%",
+	// text: podcasts.Title,
+	// font: {fontSize:35, fontWeight: "bold",}
+// });
+//  
+
+
+
 
 
 

@@ -117,9 +117,9 @@ var sectFoot = Ti.UI.createView({
 	
 };
 
-newList.addEventListener("click", function(next){
-	doWork.kids(next.source);
-});
+// newList.addEventListener("click", function(next){
+	// babySitter(next.source);
+// });
 
 
 

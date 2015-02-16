@@ -15,6 +15,11 @@ var navWindow = Ti.UI.iOS.createNavigationWindow({
 var newList = Ti.UI.createTableView({	
 });
 
+newList.addEventListener("click", function(next){
+	doWork.kids(next.source);
+});
+
+
 newList.setData(doWork.sections);
 mainWindow.add(newList);
 navWindow.open();

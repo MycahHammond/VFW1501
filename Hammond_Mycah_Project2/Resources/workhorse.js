@@ -41,9 +41,9 @@ var casts = {
 var sectionInfo = [];
 
 //Description Function
-var babySitter = function(){
+var babySitter = function(kid){
 	var descWindow = Ti.UI.createWindow({
-		title: this.title,
+		title: kid.title,
 		backgroundColor: "#fff",		
 	});
 	
@@ -53,7 +53,7 @@ var babySitter = function(){
 	});
 	
 	var descLabel = Ti.UI.createLabel({
-		text: this.desc,
+		text: kid.desc,
 		font: {
 			fontSize: 16,
 			fontStyle: "normal",
@@ -112,11 +112,18 @@ var sectFoot = Ti.UI.createView({
 			hasChild: true
 		});
 		section.add(parent);
-		parent.addEventListener("click", babySitter);
+		//parent.addEventListener("click", babySitter);
 	};
 	
 };
 
+newList.addEventListener("click", function(next){
+	doWork.kids(next.source);
+});
+
+
+
+exports.kids = babySitter;
 exports.sections = sectionInfo;
 
 

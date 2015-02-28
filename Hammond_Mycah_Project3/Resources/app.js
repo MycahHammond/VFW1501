@@ -17,6 +17,7 @@ var mainWindow = Ti.UI.createWindow({
 	layout: "horizontal",
 });
 
+
 var border = Ti.UI.createView({
 	top:0,
 	width: setWidth,

@@ -7,11 +7,12 @@ for(i=0; i<getPhotos.length; i++){
 		height: thumbSize,
 		backgroundColor: "#000"
 	});
-	// var art = Ti.UI.createImageView({
-		// image: "images/" + getPhotos[i],
-// 
-	// });
-// 	
-	// thumb.add(art);
+	var art = Ti.UI.createImageView({
+		image: "images/" + getPhotos[i],
+
+	});
+	
+	thumb.add(art);
 	imageContainer.add(thumb);
 };
+

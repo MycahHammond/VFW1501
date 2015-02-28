@@ -109,7 +109,8 @@ var sectFoot = Ti.UI.createView({
 		var parent = Ti.UI.createTableViewRow({
 			title: casts[n].list[i].title,
 			desc: casts[n].list[i].description,
-			hasChild: true
+			hasChild: true,
+			height: 50,
 		});
 		section.add(parent);
 		//parent.addEventListener("click", babySitter);

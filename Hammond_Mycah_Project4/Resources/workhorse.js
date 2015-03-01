@@ -34,8 +34,23 @@ var data = {
 			},
 		],
 	},
+	"comments":{
+		"info":[
+			{
+				title:"Comments",
+				"desc":[
+					{
+						title:"New",
+						"description":"",
+					},
+				
+				],
+			},
+		],
+	},
 	
 };
+
 
 
 //Functions
@@ -50,6 +65,7 @@ var getPage = function(target){
 		});
 			
 			var detailDisplay = Ti.UI.createImageView({
+				
 					image: "images/" + getPhotos[1], 
 			});
 		}
@@ -66,23 +82,129 @@ var getPage = function(target){
 			
 		});
 		
+		var storyTeller = function(storyTarget){
+			var storyWindow = Ti.UI.createWindow({
+				backgroundImage: "texture.jpg",
+				title: storyTarget.title,
+			});
+			
+			var storyView = Ti.UI.createView({
+				backgroundColor: "#fff",
+				top: margin*2,
+				left: margin*2,
+				right: margin*2,
+				bottom: margin*2,
+				borderRadius: 5,
+			});
+			
+			var storyText = Ti.UI.createLabel({
+				text: storyTarget.words,
+				color:"#000",
+				top: 0,
+				left: margin,
+				right: margin,
+				
+			});
+			storyView.add(storyText);
+			storyWindow.add(storyView);
+			navWindow.openWindow(storyWindow);
+			
+		};
+		
+		detailDisplay.addEventListener("click", function(read){
+			storyTeller(read.source);
+		});
 		for(var i=0, j=target.desc.length; i<j;	i++){
 	
 				var detailRow = Ti.UI.createTableViewRow({
 					title: target.desc[i].title,
-					description: target.desc[i].description
+					words: target.desc[i].description,
+					hasChild: true,
 				});
 					detailRows.push(detailRow);
+					console.log(detailRow.description);
 				};
 		
 		detailDisplay.setData(detailRows);
 	
+	}
+	//Comments button click
+	else if(target.title == "Comments"){
+		//Create Window
+		var detailWindow = Ti.UI.createWindow({
+			backgroundColor:"#333",
+			title: target.title,
+		});
+
+		//Set table view
+		var detailDisplay = Ti.UI.createTableView({
+		});
+		
+		//Open text view for input
+		var getComment = function(){
+			var commentWindow = Ti.UI.createWindow({
+				backgroundImage:"texture.jpg"
+				// backgroundColor: "#333"
+			});
+			
+			var subjectView = Ti.UI.createView({
+				top: margin*2,
+				height: 30,
+				backgroundColor: "#fff"
+			});
+			var subjectLine = Ti.UI.createTextField({
+				hintText: "Subject",
+				left: margin
+			});
+			
+			var commentArea	= Ti.UI.createTextArea({
+				top: subjectView.height + margin*2 + margin*2,
+				height: setHeight,
+				left: margin*2,
+				right: margin*2,
+			});
+			
+			var getOn = function(){
+				var newInput = commentArea.getValue();
+				
+			};
+			
+			console.log(getOn);
+			
+			
+			// commentView.add(commentArea);
+			subjectView.add(subjectLine);
+			commentWindow.add(subjectView,commentArea);
+			navWindow.openWindow(commentWindow);
+		};
+		
+		//blank array for rows
+		var commentsRows = [];
+		//build rows/array
+		for(var i=0, j=target.desc.length; i<j;	i++){
+	
+				var detailRow = Ti.UI.createTableViewRow({
+					title: target.desc[i].title,
+					input: target.desc[i].description,
+					hasChild: true,
+				});
+					commentsRows.push(detailRow);
+				};
+		
+		detailDisplay.setData(commentsRows);
+		
+		
+		detailDisplay.addEventListener("click", function(tell){
+			getComment(tell.source);
+		});
 	};
 	
+	//opens new window for all buttons
 	detailWindow.add(detailDisplay);
 	navWindow.openWindow(detailWindow);	
 	
-	//swipe to close
+	
+	//swipe to close. Just because I wanted to see if it would work.
 		var closeDetail = function(){
 			detailWindow.close({animated:true});
 		};
